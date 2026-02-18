@@ -65,7 +65,7 @@ REPLATE/
 
 2. Install backend dependencies
    - cd backend
-   - npm install
+   - npm install (express, mongoose, cors, dotenv, nodemon)
 
 3. **Configure environment variables**  
    Create a `.env` file inside the `backend/` folder with the following values:
