@@ -14,7 +14,7 @@ Built with **Node.js**, **Express**, **MongoDB**, and a clean frontend interface
   - Integrated frontend with backend APIs  
   - Connected backend and frontend for seamless data flow  
 
-- **UI/Frontend Developers**: Avantika, Haarini, Arumpavai  
+- **UI / Frontend Developers**: Avantika, Haarini, Arumpavai  
   - Responsible for building responsive pages (Donor Dashboard, Receiver Dashboard, Home/Login/Register)  
   - Designed intuitive user interfaces and ensured smooth user experience  
   - Made a clean, modern style frontend
