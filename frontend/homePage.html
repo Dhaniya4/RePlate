@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RePlate</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+     *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background:#f3efe7;
+    color:#333;
+}
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+.logo{
+    font-weight:700;
+    font-size:20px;
+    color:#2e7d32;
+}
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+nav ul li a.active{
+    color:#2e7d32;
+    font-weight:600;
+}
+.btn{
+    padding:10px 20px;
+    border-radius:8px;
+    border:none;
+    cursor:pointer;
+    font-weight:500;
+}
+.btn-primary{
+    background:#2e7d32;
+    color:white;
+}
+.btn-outline{
+    border:1px solid #ccc;
+    background:white;
+}
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 0;
+}
+.hero-text{
+    max-width:500px;
+}
+.hero-text h1{
+font-size:42px;
+    margin-bottom:20px;
+}
+.hero-text h1 span{
+    color:#2e7d32;
+}
+.hero-text p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+.hero img{
+    width:450px;
+    border-radius:20px;
+}
+.section{
+    padding:80px 0;
+    text-align:center;
+}
+.section h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+.card{
+background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
+}
+.card h3{
+    margin-bottom:10px;
+}
+/* CTA */
+.cta{
+    background:white;
+    padding:60px;
+    border-radius:20px;
+    margin:80px auto;
+    text-align:center;
+}
+.cta-buttons{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+footer{
+padding:40px 0;
+    text-align:center;
+    font-size:14px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 992px){
+    .hero{
+        flex-direction: column;
+        text-align:center;
+    }
+    .hero img{
+        margin-top:30px;
+    }
+}
+@media (max-width: 768px){
+    nav{
+        flex-direction: column;
+        gap:15px;
+    }
+    nav ul{
+        flex-direction: column;
+        gap:10px;
+    }
+    .cta{
+        padding:30px;
+    }
+}
+</style>
+</head>
+<body onload="loadHome()">
+
+<div class="container">
+
+<nav>
+    <div class="logo">💚 RePlate</div>
+    <ul>
+        <li><a href="#mission" id="aboutLink" class="active">About</a></li>
+        <li><a href="receiver.html">Receiver</a></li>
+        <li><a href="donations.html">All Donations</a></li>
+        <li><a href="loginPage.html" id="loginLink">Login</a></li>
+        <li><a href="register.html" id="registerLink">Register</a></li>
+    </ul>
+    <div>
+        <button class="btn btn-primary" onclick="window.location.href='register.html'" id="getStartedBtn">Get Started</button>
+        <button class="btn btn-outline" onclick="logout()" id="logoutBtn" style="display:none;">Logout</button>
+    </div>
+</nav>
+
+<!--  HOME PAGE  -->
+<div id="homePage">
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Reduce Food Waste, <span>Feed Hope</span></h1>
+        <p>Join our platform connecting food donors with NGOs and volunteers to reduce food wastage and improve food accessibility.</p>
+        <div class="hero-buttons">
+
+<!-- Donate button protected -->
+            <button class="btn btn-primary" id="donateBtn">Donate Food</button>
+            <button class="btn btn-outline" onclick="window.location.href='register.html'" id="becomeDonorBtn">Become a Donor</button>
+        </div>
+    </div>
+    <img src="homepageBG.jpeg" alt="Food Illustration">
+</section>
+
+<section class="section" id="mission">
+    <h2>Our Mission</h2>
+    <p>A large amount of food is wasted daily while many suffer from hunger.</p>
+
+    <div class="cards">
+        <div class="card"><h3>Reduce Food Waste</h3><p>Minimize food wastage by connecting surplus food with those in need.</p></div>
+        <div class="card"><h3>Zero Hunger Initiative</h3><p>Supports various SDGs by ensuring no one goes hungry and also ensures no food goes to waste.</p></div>
+        <div class="card"><h3>Real-time Platform</h3><p>Enable quick and efficient matching between donors and recipients.</p></div>
+        <div class="card"><h3>Social Responsibility</h3><p>Encourage responsible consumption and sustainability.</p></div>
+    </div>
+</section>
+
+<div class="cta">
+    <h2>Ready to Make a Difference?</h2>
+    <p>Join our community today and help build a world with zero hunger.</p>
+    <div class="cta-buttons">
+        <!-- CTA donate button protected -->
+        <button class="btn btn-primary" id="donateNowBtn">Donate Now</button>
+        <button class="btn btn-outline" onclick="window.location.href='register.html'" id="registerDonorBtn">Register as Donor</button>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    © 2026 RePlate. Built with 💚
+</footer>
+
+</div>
+
+<script src="script1.js"></script>
+<script>
+function loadHome() {
+  const user = localStorage.getItem("username");
+
+  const logo = document.querySelector(".logo");
+  const loginLink = document.getElementById("loginLink");
+  const registerLink = document.getElementById("registerLink");
+  const logoutBtn = document.getElementById("logoutBtn");
+  const getStartedBtn = document.getElementById("getStartedBtn");
+  const becomeDonorBtn = document.getElementById("becomeDonorBtn");
+  const registerDonorBtn = document.getElementById("registerDonorBtn");
+  const donateBtn = document.getElementById("donateBtn");
+  const donateNowBtn = document.getElementById("donateNowBtn");
+
+  if (user) {
+    logo.textContent = "💚 RePlate : Welcome, " + user;
+    if (loginLink) loginLink.style.display = "none";
+    if (registerLink) registerLink.style.display = "none";
+    if (getStartedBtn) getStartedBtn.style.display = "none";
+    if (becomeDonorBtn) becomeDonorBtn.style.display = "none";
+    if (registerDonorBtn) registerDonorBtn.style.display = "none";
+
+    if (logoutBtn) logoutBtn.style.display = "inline-block";
+
+    if (donateBtn) donateBtn.onclick = () => window.location.href = "donor.html";
+    if (donateNowBtn) donateNowBtn.onclick = () => window.location.href = "donor.html";
+  } else {
+
+    logo.textContent = "💚 RePlate";
+
+    if (loginLink) loginLink.style.display = "inline-block";
+    if (registerLink) registerLink.style.display = "inline-block";
+    if (getStartedBtn) getStartedBtn.style.display = "inline-block";
+    if (becomeDonorBtn) becomeDonorBtn.style.display = "inline-block";
+    if (registerDonorBtn) registerDonorBtn.style.display = "inline-block";
+
+    if (logoutBtn) logoutBtn.style.display = "none";
+
+    if (donateBtn) donateBtn.onclick = () => window.location.href = "loginPage.html";
+    if (donateNowBtn) donateNowBtn.onclick = () => window.location.href = "loginPage.html";
+  }
+}
+</script>
+</body>
+</html>

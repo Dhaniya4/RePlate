@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Donations - RePlate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadAllDonations()">
+
+<header>
+  <h1>All Donations</h1>
+  <a href="homePage.html"><button>Back to Home</button></a>
+</header>
+
+<section class="donations-section">
+  <div id="allDonationList"></div>
+</section>
+
+<script src="script.js"></script>
+<script>
+async function loadAllDonations() {
+  const list = document.getElementById("allDonationList");
+  try {
+    const res = await fetch("http://localhost:4000/api/donations");
+    const donations = await res.json();
+
+    if (!Array.isArray(donations) || donations.length === 0) {
+      list.innerHTML = `<p style="text-align:center; color:#555;">No donations available yet.</p>`;
+      return;
+    }
+
+    list.innerHTML = "";
+    donations.forEach(donation => {
+      const card = document.createElement("div");
+      card.className = "donation-card";
+      card.innerHTML = `
+        <h3>${donation.food}</h3>
+        <p><b>Donor:</b> ${donation.donor}</p>
+        <p><b>Contact:</b> ${donation.contactInfo || "N/A"}</p>
+        <p><b>Quantity:</b> ${donation.qty || "N/A"} meals</p>
+      <p><b>Location:</b> ${
+  donation.location ||
+  (donation.lat && donation.lon
+    ? `${donation.lat.toFixed(4)}, ${donation.lon.toFixed(4)}`
+    : "N/A")
+}</p>
+        <p><b>Status:</b> ${donation.status}</p>
+        ${donation.lat && donation.lon ? 
+          `<p><a href="https://www.google.com/maps/search/?api=1&query=${donation.lat},${donation.lon}" target="_blank">View on Map</a></p>` : ""}
+      `;
+      list.appendChild(card);
+    });
+  } catch (err) {
+    list.innerHTML = `<p style="color:red;">Error loading donations: ${err.message}</p>`;
+  }
+}
+</script>
+</body>
+</html>

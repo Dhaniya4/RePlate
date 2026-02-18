@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Receiver - Food Donation</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+(function checkAuth() {
+  const userId = localStorage.getItem("userId");
+  if (!userId) {
+    window.location.href = "loginPage.html";
+  }
+})();
+  </script>
+</head>
+<body onload="loadDonations()">
+<header>
+  <h1>Receiver Dashboard</h1>
+  <a href="donor.html"><button>Go to Donor Page</button></a>
+<script>
+  document.getElementById("donorBtn").addEventListener("click", () => {
+    if (!localStorage.getItem("userId")) {
+      alert("Please log in first.");
+      window.location.href = "loginPage.html";
+    } else {
+      window.location.href = "donorPage.html";
+    }
+  });
+</script>
+</header>
+
+<section class="donations-section">
+  <h2>Available Food (Pending & Requested)</h2>
+  <div id="donationList"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
