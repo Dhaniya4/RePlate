@@ -57,23 +57,23 @@ REPLATE/
 
 ## ⚙️ Setup & Run
 
- Clone the repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/Dhaniya4/RePlate.git
    cd REPLATE
 
- Install backend dependencies
+2. Install backend dependencies
    cd backend
    npm install
 
- **Configure environment variables**  
+3. **Configure environment variables**  
    Create a `.env` file inside the `backend/` folder with the following values:
 
    ```env
    MONGO_URI=mongodb://localhost:27017/food_db
    PORT=4000
 
- Run backend and frontend
+4. Run backend and frontend
    - Start backend:
    npm run dev
    - Backend runs on http://localhost:4000
@@ -83,6 +83,7 @@ Frontend runs on http://127.0.0.1:5500 (default Live Server port)
 ## 🚀 Deployment (Future Work)
 - Planned deployment on cloud platforms ( Render + MongoDB Atlas).
 - Frontend hosting on GitHub Pages
+
 ## demo : 
 
 https://drive.google.com/file/d/1TnGRvgW64KDk6aRQKh-OMsI0vFIXeL1A/view?usp=drive_link
