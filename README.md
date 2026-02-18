@@ -39,21 +39,14 @@ Built with **Node.js**, **Express**, **MongoDB**, and a clean frontend interface
 - **APIs**: Google Maps, OpenStreetMap (Nominatim)
 
 ## 📂 Project Structure
-REPLATE/
-│── backend/             #server-side code       
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/          
-│   └── server.js
-│
-│── frontend/            # Client-side code
-│   ├── css/              
-│   ├── js/              
-│   └── pages/           
-│
-│── .env                  # Environment variables (ignored in Git)
-│── .gitignore            # Ignore node_modules, logs, secrets, etc.
-│── README.md             # Project documentation
+
+REPLATE/ │── backend/             # Server-side code
+│   ├── routes/ │   ├── controllers/ │   ├── models/
+│   └── server.js │ │── frontend/            # Client-side code │   ├── css/
+│   ├── js/
+│   └── pages/
+│ │── .env                 # Environment variables (ignored in Git) │── .gitignore           # Ignore node_modules, logs, secrets, etc. │── README.md            # Project documentation
+
 
 ## ⚙️ Setup & Run
 
