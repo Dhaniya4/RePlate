@@ -47,11 +47,11 @@ REPLATE/
 │   ├── controllers/
 │   ├── models/
 │   └── server.js
-│ ├── frontend/            # Client-side code
-│   ├── css/
-│   ├── js/
-│   └── pages/
-│ ├── .env                 # Environment variables (ignored in Git) ├── .gitignore           # Ignore node_modules, logs, secrets, etc.
+├── frontend/            # Client-side code
+│   
+│   ├── contains html,css and javascript files
+│   
+├── .env                 # Environment variables (ignored in Git) ├── .gitignore           # Ignore node_modules, logs, secrets, etc.
 └── README.md            # Project documentation
 
 ```
