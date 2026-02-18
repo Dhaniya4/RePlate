@@ -63,8 +63,8 @@ REPLATE/
    cd REPLATE
 
 2. Install backend dependencies
-   cd backend
-   npm install
+   - cd backend
+   - npm install
 
 3. **Configure environment variables**  
    Create a `.env` file inside the `backend/` folder with the following values:
@@ -75,7 +75,7 @@ REPLATE/
 
 4. Run backend and frontend
    - Start backend:
-   npm run dev
+   - npm run dev
    - Backend runs on http://localhost:4000
    - Start frontend: Open frontend/homePage.html with Live Server in VS Code
 Frontend runs on http://127.0.0.1:5500 (default Live Server port)
