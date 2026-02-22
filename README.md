@@ -49,7 +49,7 @@ REPLATE/
 │   └── server.js
 ├── frontend/            # Client-side code
 │   
-│   ├── contains html,css and javascript files
+│   ├── contains html, css, javascript files and also background images 
 │   
 ├── .env                 # Environment variables (ignored in Git) ├── .gitignore           # Ignore node_modules, logs, secrets, etc.
 └── README.md            # Project documentation
