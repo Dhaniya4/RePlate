@@ -10,7 +10,7 @@ app.use(cors({ origin: 'http://localhost:5500' }));
 app.use(express.json());
 app.use('/api/donations', router);
 app.use("/api/users", Userrouter);
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 const mongouri = process.env.MONGO_URI;
 
 mongoose.connect(mongouri)
