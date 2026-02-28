@@ -6,7 +6,7 @@ import router from './routes/FoodRoute.js';
 import cors from 'cors';
 import Userrouter from './routes/UserRoutes.js';
 const app = express();
-app.use(cors({ origin: 'http://localhost:5500' }));
+app.use(cors());
 app.use(express.json());
 app.use('/api/donations', router);
 app.use("/api/users", Userrouter);
@@ -18,5 +18,5 @@ mongoose.connect(mongouri)
   .catch(err => console.error("MongoDB connection error:", err.message));
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on ${port}`);
 });

@@ -10,7 +10,7 @@ async function register() {
   }
 
   try {
-    const res = await fetch("http://localhost:4000/api/users/register", {
+    const res = await fetch("https://replate-ttjj.onrender.com/api/users/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username: user, password: pass })
@@ -21,7 +21,7 @@ async function register() {
       msg.style.color = "green";
       msg.textContent = "Registration successful! Redirecting...";
       setTimeout(() => {
-        window.location.href = "homePage.html";
+        window.location.href = "index.html";
       }, 1500);
     } else {
       msg.style.color = "red";
@@ -41,7 +41,7 @@ async function login() {
   let msg = document.getElementById("msg");
 
   try {
-    const res = await fetch("http://localhost:4000/api/users/login", {
+    const res = await fetch("https://replate-ttjj.onrender.com/api/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username: user, password: pass }) // ✅ no contact info
@@ -56,7 +56,7 @@ async function login() {
       localStorage.setItem("username", data.user.username);
 
       setTimeout(() => {
-        window.location.href = "homePage.html";
+        window.location.href = "index.html";
       }, 1000);
     } else {
       msg.style.color = "red";
@@ -73,5 +73,5 @@ async function login() {
 function logout() {
   localStorage.removeItem("userId");
   localStorage.removeItem("username");
-  window.location.href = "homePage.html";
+  window.location.href = "index.html";
 }

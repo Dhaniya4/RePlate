@@ -30,7 +30,7 @@ if (form) {
     };
 
     try {
-      const res = await fetch("http://localhost:4000/api/donations", {
+      const res = await fetch("https://replate-ttjj.onrender.com/api/donations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(donation)
@@ -55,7 +55,7 @@ async function loadDonations() {
   if (!donationList) return;
 
   try {
-    const res = await fetch("http://localhost:4000/api/donations");
+    const res = await fetch("https://replate-ttjj.onrender.com/api/donations");
     if (!res.ok) throw new Error(`Server responded with ${res.status}`);
 
     const donations = await res.json();
@@ -147,7 +147,7 @@ async function loadDonations() {
 async function updateDonationStatus(donationId, newStatus) {
   try {
     const res = await fetch(
-      `http://localhost:4000/api/donations/${donationId}`,
+      `https://replate-ttjj.onrender.com/api/donations/${donationId}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
