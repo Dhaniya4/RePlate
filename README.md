@@ -4,6 +4,7 @@ A web application that connects donors and receivers to reduce food waste and su
 Built with **Node.js**, **Express**, **MongoDB**, and a clean frontend interface.
 
 ---
+
 >This project was created as part of the Science Day competition to showcase technology for social impact.
 
 ## 🎥 Live Demo
