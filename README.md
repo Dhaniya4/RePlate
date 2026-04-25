@@ -6,6 +6,9 @@ Built with **Node.js**, **Express**, **MongoDB**, and a clean frontend interface
 ---
 >This project was created as part of the Science Day competition to showcase technology for social impact.
 
+## 🎥 Live Demo
+[RePlate Project on Render](https://replateproject.onrender.com/)
+
 ## 👥 ZeroWaste Warriors
 
 - **Team Leader / Backend Developer / Database Engineer**: Dhaniya Sri
@@ -83,6 +86,3 @@ Frontend runs on http://127.0.0.1:5500 (default Live Server port)
 
 ## 🚀 Deployment :
    - Deployed backend and frontend on Render (Web Hosting Platform) 
- 
-## 🎥 Live Demo
-[RePlate Project on Render](https://replateproject.onrender.com/)
